@@ -1,0 +1,17 @@
+﻿{
+  "name": "Psort",
+  "version": "0.0.1",
+  "manifest_version": 2,
+  "description": "Pixivをソートする",
+	"browser_action": {
+	 "default_title": "test",
+	  "default_popup": "popup.html"
+	 },
+  "content_scripts": [
+    {
+      "matches": ["http://*/*"],
+      "js": ["js/fuga.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
