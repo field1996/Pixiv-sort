@@ -7,7 +7,6 @@ window.onload = function () {
 		var v = LItag[i];
 		base.push(v);
 	}
-	alert('stend by ready');
 };
 
 
@@ -32,16 +31,14 @@ var getLi = function(){
 		if( i < j ) return 1;
 		return 0;
 	});
-	console.log(array);
 	sort(array);
 }
 
 var sort = function(array){
 	var ULtag = document.getElementsByClassName("_image-items");
-	console.log(ULtag);
 	var el = ULtag[0];
 	
-	el.innerHTML = "";
+	//el.innerHTML = "";
 	
 	var fragment = document.createDocumentFragment();
 	
@@ -55,8 +52,10 @@ var sort = function(array){
 }
 
 var reset = function(base){
+	if(base.length == 0){
+		return;
+	}
 	var ULtag = document.getElementsByClassName("_image-items");
-	console.log(base);
 	var el = ULtag[0];
 	
 	el.innerHTML = "";
